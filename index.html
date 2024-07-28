@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./imagen/imagen/logo-Aseguramos75.png">
+    </div>
+    <h1>Seguros</h1>
+    <h2>Seguros para tu tranquilidad</h2>
+</header>
+<main>
+  <script>
+    // Seleccion de elementos
+    const carrusel = document.querySelector('.carrusel');
+    const carruselInner = document.querySelector('.carrusel-inner');
+    const carruselItems = document.querySelectorAll('.carrusel-item');
+    const carruselPrev = document.querySelector('.carrusel-prev');
+    const carruselNext = document.querySelector('.carrusel-next');
+
+    //Variables
+    let currentItem = 0;
+
+    // Funcion para mostrar el siguiente elemneto
+    function showNextItem() {
+      carruselItems[currentItem].classList.remove('active');
+      currentItem = (currentItem + 1) % carruselItems.length;
+      carruselItems[currentItem].classList.add('active');
+  }
+    
+  // Funcion para mostrar el elemneto anterior
+  function showPrevItem() {
+    carruselItems[currentItem].classList.remove('active');
+    currentItem = (currentItem - 1 + carruselItems.length) % carruselItems.length;
+    carruselItems[currentItem].classList.add('active');
+}
+
+// Eventos
+carruselPrev.addEventListener('click', showPrevItem);
+carruselNext.addEventListener('click', showNextItem);
+
+// Inicializacion
+carruselItems[0].classList.add('active');
+</script>
+
+
+    <section class="carrusel">
+      <div class="carrusel-inner">
+        <div class="carrusel-item">
+        <img src="./imagen/./imagen/VIDA.jpg" alt="Seguro de vida">
+      </div>
+      <div class="carrusel-item">
+        <img src="./imagen/imagen/Automovil.png" alt="Seguro de autos">
+      </div>
+      <div class="carrusel-item">
+        <img src="./imagen/imagen/hogar.jpg" alt="Seguro de hogar">
+      </div>
+      <div class="carrusel">
+        <img src="./imagen/imagen/salud.jpg" alt="Seguro de salud">
+      </div>
+
+      <div class="carrusel"></div>
+        <img src="./imagen/imagen/Assist card.png" alt="Seguro de viaje">
+      </div>
+      <div class="crrisel-item">
+        <img src="./imagen/imagen/RCE.jpg" alt="Seguro de RCE para profesionales de la salud">
+      </div>
+    </section>
+
+    <section class="productos">
+        <h3>Seguros de vida</h3>
+        <p>Protege a tus seres queridos con nuestro seguro de vida</p>
+        <a href="seguro-vida.html">Más información</a>
+        <h3>Seguros de autos</h3>
+        <p>Protege tu vehículo con nuestro seguro de autos</p>
+        <a href="seguro-autos.html">Más información</a>
+        <h3>Seguros de hogar</h3>
+        <p>Protege tu hogar con nuestro seguro de hogar</p>
+        <a href="seguro-hogar.html">Más información</a>
+        <h3>Seguros de salud</h3>
+        <p>Protege tu salud con nuestro seguro de salud</p>
+        <a href="seguro-salud.html">Más información</a>
+        <h3>Seguros de viaje</h3>
+        <p>Protege tus viajes con nuestro seguro de viaje</p>
+        <a href="seguro-viaje.html">Más información</a>
+        <h3>Seguros de RCE para profesionales de la salud</h3>
+        <p>Protege tu carrera con nuestro seguro de RCE para profesionales de la salud</p>
+        <a href="seguro-rce.html">Más información</a>
+    </section>
+    <section class="cta">
+        <h3>¿Quieres obtener un presupuesto o contactar con un agente?</h3>
+        <button>Obtener presupuesto</button>
+        <button>Contactar con un agente</button>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 Aseguaramos 75</p>
+</footer>
+</body>
+</html>
+
+ 
+     
